@@ -15,4 +15,4 @@ if __name__ == "__main__":
     else:
         import run_flask
         slack.set_callback(response_from_image)
-        run_flask.app.run(port=int(os.environ.get("SLACK_BOT_PORT", 3000)))
+        run_flask.app.run(host='0.0.0.0', port=int(os.environ.get("SLACK_BOT_PORT", 3000)))
