@@ -21,10 +21,10 @@ def crop(img: Image):
     block_width = (Right - Left) * H / 3
     block_height = (Bottom - Top) * H / 2
     pieces = []
-    R = 0.2
+    Rv, Rh = 0.18, 0.08
     for i in range(5):
-        x, y = left + block_width * ((i % 3) + R), top + block_height * ((i // 3) + R)
-        p = img.crop((x, y, x + block_width * (1 - 2 * R), y + block_height * (1 - 2 * R)))
+        x, y = left + block_width * ((i % 3) + Rh), top + block_height * ((i // 3) + Rv)
+        p = img.crop((x, y, x + block_width * (1 - 2 * Rh), y + block_height * (1 - 2 * Rv)))
         p = p.convert('L') # Grey mode
         pieces.append(p)
     return pieces
