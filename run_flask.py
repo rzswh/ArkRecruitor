@@ -34,5 +34,5 @@ def handle_tags():
         return 'No tags', 400
     return core.response_from_tags(tags.split(','))
 
-if __name__ == "__main__":
-    app.run(port=int(os.environ.get("SLACK_BOT_PORT", 3000)))
+# if __name__ == "__main__":
+#     app.run(port=int(os.environ.get("SLACK_BOT_PORT", 3000)))

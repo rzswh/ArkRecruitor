@@ -1,1 +1,1 @@
-web: SLACK_BOT_PORT=$PORT gunicorn run_flask:app
+web: gunicorn run_flask:app

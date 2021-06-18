@@ -45,8 +45,8 @@ def getApp():
             say(response_callback(img))
     return app
 
-def start():
-    getApp().start(port=int(os.environ.get("SLACK_BOT_PORT", 3000)))
+# def start():
+    # getApp().start(port=int(os.environ.get("SLACK_BOT_PORT", 3000)))
 
 ## 问题：
 # 3. 接收者栏目里没有我的APP
