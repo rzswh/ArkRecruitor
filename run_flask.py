@@ -3,10 +3,11 @@ from flask import request
 from slack_bolt.adapter.flask import SlackRequestHandler
 import os
 import core
-from slack import getApp
+from slack import getApp, set_callback
 
 app = flask.Flask(__name__)
 handler = SlackRequestHandler(getApp())
+set_callback(core.response_from_image)
 
 @app.route("/slack/events", methods=["POST"])
 def slack_events():
